@@ -1,0 +1,21 @@
+name: web-app
+api_version: 1
+platform: aws
+runtime:ec2
+dockerfile: DOCKERFILE
+region: ap-southeast-1
+az_count: 1
+target_group_name: web-app
+- health_check_route: /all
+min_server_count: 1
+max_server_count: 3
+autoscaling: true
+- cpu: 80
+- memory: 70
+server_cpu: 1
+server_memory: 512
+deployment_type: blue_green
+alb_rules:
+- route: foo.com
+  destination: web-app
+  

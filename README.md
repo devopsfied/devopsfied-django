@@ -1,10 +1,10 @@
-![Django from scratch](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkQHuCdu1qPh1-5sBmgaxB8YOGFZxPDRuinFpNtfp0S_-uZEh92A&s)
+![Django from scratch](https://github.com/devopsfied/devopsfied-django/blob/master/blob/django_icon.png?raw=true)
 
-# Django from scratch
+# Deploy Django app from scratch on AWS in just one step
 
 Run and deploy Django app with devopsfied. 
 
-<a href="https://devopsfied.com/download"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSl4G05ZDJkFsCmo-Q61BhlulUGnYtldqDoJIad32qfKNuB1_fB&usqp=CAU" /></a>
+<a href="https://devopsfied.com/download" target="_blank"><img src="https://github.com/devopsfied/devopsfied-django/blob/master/blob/download.jpg?raw=true" /></a>
 
 
 ## Clone the repo
@@ -20,7 +20,7 @@ cd devopsfied-django
 ## Run the app
 
 ```bash
-# Run django as you would normally, with Nanobox
+# Run django as you would normally
 python manage.py runserver 0.0.0.0:8000
 ```
 
@@ -33,8 +33,15 @@ Visit your app at <a href="http://0.0.0.0:8000" target="\_blank">0.0.0.0:8000</a
 With Devopsfied, you don't have to have anything installed on your machine to deploy your app:
 
 ```bash
-# Deploy django web app in production.
-ds web app deploy
+# Deploy django web app in production using containers on EC2.
+# Creates vpc, sg, subnet, ig, nat, alb, routes etc in aws in one step.
+
+ds web app deploy app-ec2.yaml
+
+
+# Deploy django web app in production using containers on ECS.
+# Creates ecs cluster, tasks, vpc, sg, subnet, ig, nat, alb, routes etc in aws in one step.
+ds web app deploy app-ecs.yaml
 
 ```
 
